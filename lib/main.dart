@@ -47,16 +47,30 @@ class MyApp extends StatelessWidget {
         _buildButtonColumn(color, Icons.near_me, 'ROUTE'),
         _buildButtonColumn(color, Icons.share, 'SHARE'),
       ],
-    );  
+    );
+
+    Widget textSection = Container(
+      padding: const EdgeInsets.all(32),
+      child: const Text(
+        'Carilah teks di internet yang sesuai '
+        'dengan foto atau tempat wisata yang ingin '
+        'Anda tampilkan. '
+        'Tambahkan nama dan NIM Anda sebagai '
+        'identitas hasil pekerjaan Anda. '
+        'Selamat mengerjakan 🙂.',
+        softWrap: true,
+      ),
+    );
 
     return MaterialApp(
       title: 'Flutter layout: Fearent Aurellia Permatasari — 244107060014',
       home: Scaffold(
         appBar: AppBar(title: const Text('Flutter layout demo')),
         body: Column(children: [
-          titleSection,
+          titleSection, 
           buttonSection,
-          ]),
+          textSection
+        ]),
       ),
     );
   }
